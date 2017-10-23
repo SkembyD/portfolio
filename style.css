@@ -1,0 +1,127 @@
+body{
+  margin: 0;
+}
+.bgImg img{
+  background-image: url("images/imgHead.jpg")no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.list-no-style{
+  list-style: none;
+}
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  font-family: cursive;
+  font-size: 20px;
+  margin-top:10px;
+}
+ul li {
+  margin-left:50px; }
+ul li a { color:#fff;
+  text-decoration:none;
+}
+ul li a:hover {color:#000;
+  text-decoration:none;
+  }
+.fixed{
+  position:fixed;
+  z-index: 999;
+  width:100%;
+  justify-content:center;
+  background: #F60;
+  }
+.flex-container{
+    justify-content:center;
+    flex-direction: column;
+  }
+.flex-container h1{
+  color: #F60;
+    text-align: center;
+    margin-top:50px;
+    margin-right:3%;
+    font-size: 40px;
+}
+.half-size{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kd{
+    display: flex;
+    margin-top: 40px;
+    margin-right: 30px;
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+}
+.section-container {
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 100vh;
+    border-top:5px solid #F60;
+  }
+  p{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: cursive;
+    font-size: 1.5em;
+}
+.triple{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 10px;
+  text-align:center;
+  padding-top: 40px;
+}
+.hardwork, .friendship, .fun{
+  display: flex;
+    flex-direction: column;
+  width:25%;
+  height: 25%;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+
+.hardwork img , .friendship img , .fun img {
+width:60%;
+height:60%;
+border-radius: 25%;
+margin-left: 4vw;
+margin-bottom: 8px;
+}
+.quadruple {
+  min-height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.quadruple > div {
+  display: flex;
+  flex-basis: calc(50% - 40px);
+  justify-content: center;
+  flex-direction: column;
+}
+.quadruple > div > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.box { margin: 20px; }
+.box1 { background-color: red; }
+.box2 { background-color: orange; }
+.box3 { background-color: purple; }
+.box4 { background-color: grey; }
+
+.flex-container{
+  background-image: url("images/friends.jpg")no-repeat cover;
+}
