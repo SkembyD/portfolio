@@ -1,127 +1,246 @@
 body{
   margin: 0;
 }
-.bgImg img{
-  background-image: url("images/imgHead.jpg")no-repeat;
-  position: relative;
-  width: 100%;
+@keyframes type{
+  from { width: 0; }
+}
+@keyframes type2{
+  0%{width: 2;}
+  50%{width: 2;}
+  100%{ width: 100; }
+}
+@keyframes blink{
+  to{opacity: .0;}
+}
+/* Navigation Menu*/
+.header-image{
+  background: url("images/lyon.jpg")no-repeat center;
+  background-size:cover;
   height: 100vh;
+  width: 100%;
+  display: block;
 }
-.list-no-style{
-  list-style: none;
-}
-ul{
+.header-container {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  position: relative;
+  object-fit: none;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  justify-content: center;
-  font-family: cursive;
-  font-size: 20px;
-  margin-top:10px;
 }
-ul li {
-  margin-left:50px; }
-ul li a { color:#fff;
-  text-decoration:none;
+.text1 {
+  font-size: 80px;
+  text-align: center;
+  color: #c4d7ff;
+  text-shadow: 2px 2px #00091c;
+  padding: 90px;
+  opacity: 1;
+  z-index: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 90%;
+  animation: type 4s steps(220, end);
+  font-size: 80px;
+  color: #f0f8ff;
+  text-shadow: 2px 2px #848484;
+  margin-top: 15%;
+  opacity: 1;
 }
-ul li a:hover {color:#000;
-  text-decoration:none;
-  }
-.fixed{
-  position:fixed;
-  z-index: 999;
-  width:100%;
-  justify-content:center;
-  background: #F60;
-  }
+/* i Dropdown  */
+.drop_i {
+  background-color: #000;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: top ;
+  padding:10px;
+  margin:15px;
+  font-size: 50px;
+}
+.dropdown {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 23px;
+}
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-shadow: 2px 2px #00091c
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #c4d7ff}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Change the background color of the i dropdown when the dropdown content is shown */
+.dropdown:hover .drop_i {
+  background-color:#c4d7ff;
+}
+.press-down {
+  opacity: 1;
+  -webkit-transition: all .5s ease-in 3s;
+  transition: all .5s ease-in 3s;
+}
+.press-down {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #c4d7ff;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+.press-down:before {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 6px);
+  transform: rotate(-45deg);
+  display: block;
+  width: 10px;
+  height: 10px;
+  content: "";
+  border: 2px solid white;
+  border-width: 0px 0 2px 2px;
+}
 .flex-container{
-    justify-content:center;
-    flex-direction: column;
+  background: url("images/mount.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  border-top: 1px solid black;
+}
+.flex-row{
+  border: solid 1px black;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.column_1{
+  height: 90%;
+  width: 25%;
+  margin-left: 10px;
+}
+.column_1 img{
+  height: 20em;
+  width: 20em;
+  border-radius: 50%;
+  margin-left: 60px;
+  margin-top: 10px;
+}
+.column_2{
+  height: 90%;
+  width: 45%;
+  margin-right: 20px;
+}
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
   }
-.flex-container h1{
-  color: #F60;
-    text-align: center;
-    margin-top:50px;
-    margin-right:3%;
-    font-size: 40px;
-}
-.half-size{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.kd{
-    display: flex;
-    margin-top: 40px;
-    margin-right: 30px;
-    width: 25%;
-    height: 25%;
-    border-radius: 50%;
-}
-.section-container {
-    padding-left: 10%;
-    padding-right: 10%;
-    height: 100vh;
-    border-top:5px solid #F60;
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
   }
-  p{
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    font-family: cursive;
-    font-size: 1.5em;
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+.introduce {
+  font-size: 30px;
+  margin-left: 19px;
+}
+.values{
+  font-size: 40px;
+  margin-top: 5px;
+  text-align: center;
 }
 .triple{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 20px;
-  margin-left: 10px;
   text-align:center;
   padding-top: 40px;
+  padding-left: 19%;
 }
-.hardwork, .friendship, .fun{
+.hardwork, .friendship,{
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
+  align-items: center;
   width:25%;
   height: 25%;
   border-radius: 50%;
   margin-top: 5px;
 }
-
-
-.hardwork img , .friendship img , .fun img {
-width:60%;
-height:60%;
-border-radius: 25%;
-margin-left: 4vw;
-margin-bottom: 8px;
+.fun{
+    display: flex;
+    flex-direction: column;
+    margin-top: 9%;
+    align-items: center;
+    padding-left: 64%;
 }
-.quadruple {
-  min-height: 50%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-.quadruple > div {
-  display: flex;
-  flex-basis: calc(50% - 40px);
-  justify-content: center;
-  flex-direction: column;
-}
-.quadruple > div > div {
+.hardwork img {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  align-items: center;
+  width:14em;
+  height:12em;
+  border-radius: 25%;
+  margin-left: 0vw;
+  margin-bottom: 8px;
 }
-
-.box { margin: 20px; }
-.box1 { background-color: red; }
-.box2 { background-color: orange; }
-.box3 { background-color: purple; }
-.box4 { background-color: grey; }
-
-.flex-container{
-  background-image: url("images/friends.jpg")no-repeat cover;
+.friendship img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:14em;
+  height:12em;
+  border-radius: 25%;
+  margin-left: 0vw;
+  margin-bottom: 8px;
+}
+.fun img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:14em;
+  height:12em;
+  border-radius: 25%;
+  margin-bottom: 8px;
 }
